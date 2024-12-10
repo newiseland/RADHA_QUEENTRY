@@ -217,22 +217,22 @@ autoclean = []
 
 START_IMG_URL = getenv(
     "START_IMG_URL",
-    "https://graph.org/file/099a1a58e21a817bd163b-1f4320a432bf0724c2.jpg",
+    "https://graph.org/file/c34b45597296ef3c0de86-4cacc0a2f33d528852.jpg",
 )
 
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
-    "https://telegra.ph/file/a494ac7666704a51d6448.png",
+    "https://graph.org/file/c34b45597296ef3c0de86-4cacc0a2f33d528852.jpg",
 )
 
 PLAYLIST_IMG_URL = getenv(
     "PLAYLIST_IMG_URL",
-    "https://telegra.ph/file/a494ac7666704a51d6448.png",
+    "https://graph.org/file/c34b45597296ef3c0de86-4cacc0a2f33d528852.jpg",
 )
 
 GLOBAL_IMG_URL = getenv(
     "GLOBAL_IMG_URL",
-    "https://telegra.ph/file/a494ac7666704a51d6448.png",
+    "https://graph.org/file/c34b45597296ef3c0de86-4cacc0a2f33d528852.jpg",
 )
 
 STATS_IMG_URL = getenv(
