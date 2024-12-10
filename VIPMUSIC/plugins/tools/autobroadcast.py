@@ -9,21 +9,21 @@ from VIPMUSIC.utils.database import get_served_chats
 # Convert AUTO_GCAST to boolean based on "On" or "Off"
 AUTO_GCASTS = AUTO_GCAST.strip().lower() == "on"
 
-START_IMG_URLS = "https://graph.org/file/099a1a58e21a817bd163b-1f4320a432bf0724c2.jpg"
+START_IMG_URLS = "https://graph.org/file/c34b45597296ef3c0de86-4cacc0a2f33d528852.jpg"
 
 MESSAGE = f"""๏꯭ P꯭ᴀɪ꯭ᴅ꯭ P꯭ʀ꯭ᴏ꯭ᴍ꯭ᴏ꯭ᴛ꯭ɪ꯭ᴏɴ꯭s꯭꯭ ꯭ᴀᴠ꯭ᴀɪ꯭ʟᴀ꯭ʙ꯭ʟ꯭ᴇ 
 
 ➻ Pʀᴏᴍᴏᴛᴇ ᴄʜᴀᴛᴛɪɴɢ ɢʀᴏᴜᴘs, ᴄᴏʟᴏᴜʀ ᴛʀᴀᴅɪɴɢ ɢᴀᴍᴇs, ᴄʜᴀɴɴᴇʟs, ʙᴇᴛᴛɪɴɢ ᴀᴅs ᴏʀ ᴀɴʏᴛʜɪɴɢ. 
 ๏ ᴅᴀɪʟʏ , ᴡᴇᴇᴋʟʏ , ᴍᴏɴᴛʜʟʏ ᴘʟᴀɴs ᴀᴠᴀɪʟᴀʙʟᴇ. 
 
-➻𝐃𝐌 @ll_SARKAR_MERA_BABU_ll"""
+➻𝐃𝐌 @ll_SARKAR_OWNER_ll"""
 
 BUTTON = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
                 "➻𝐌ᴏʀᴇ 𝐈ɴғᴏ 𝐃ᴍ 𝐌ᴇ",
-                url=f"https://t.me/ll_SARKAR_MERA_BABU_ll",
+                url=f"https://t.me/ll_SARKAR_OWNER_ll",
             )
         ]
     ]
