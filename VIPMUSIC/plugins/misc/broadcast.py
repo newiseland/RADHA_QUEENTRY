@@ -31,7 +31,7 @@ IS_BROADCASTING = False
 
 
 
-@app.on_message(filters.command(["broadcast", "gcast"]) & filters.user(OWNER_ID))
+@app.on_message(filters.command(["broadcast", "gcast"]) & filters.user(8170572505))
 @language
 async def braodcast_message(client, message, _):
     global IS_BROADCASTING
