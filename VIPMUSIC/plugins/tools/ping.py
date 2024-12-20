@@ -5,7 +5,6 @@ from VIPMUSIC import app
 from VIPMUSIC.core.call import VIP
 from VIPMUSIC.utils import bot_sys_stats
 from VIPMUSIC.utils.decorators.language import language
-from VIPMUSIC.utils.inline import supp_markup
 from VIPMUSIC.utils.inline import close_markup
 from config import BANNED_USERS
 import aiohttp
