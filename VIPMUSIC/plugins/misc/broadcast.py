@@ -9,68 +9,26 @@
 #
 
 import asyncio
-from datetime import datetime, timedelta
 
 from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter
 from pyrogram.errors import FloodWait
-from pyrogram.raw import types
 
-import config
-from config import OWNER_ID, adminlist, chatstats, clean, userstats
-from strings import get_command
 from VIPMUSIC import app
-from VIPMUSIC.utils.cleanmode import protected_messages
+from VIPMUSIC.misc import SUDOERS
 from VIPMUSIC.utils.database import (
     get_active_chats,
     get_authuser_names,
-    get_particular_top,
+    get_client,
     get_served_chats,
     get_served_users,
-    get_user_top,
-    is_cleanmode_on,
-    save_broadcast_stats,
-    set_queries,
-    update_particular_top,
-    update_user_top,
 )
 from VIPMUSIC.utils.decorators.language import language
 from VIPMUSIC.utils.formatters import alpha_to_int
+from config import adminlist
 
-BROADCAST_COMMAND = get_command("BROADCAST_COMMAND")
-AUTO_DELETE = config.CLEANMODE_DELETE_MINS
-AUTO_SLEEP = 5
 IS_BROADCASTING = False
-cleanmode_group = 15
 
-
-@app.on_raw_update(group=cleanmode_group)
-async def clean_mode(client, update, users, chats):
-    global IS_BROADCASTING
-    if IS_BROADCASTING:
-        return
-    try:
-        if not isinstance(update, types.UpdateReadChannelOutbox):
-            return
-    except:
-        return
-    if users:
-        return
-    if chats:
-        return
-    message_id = update.max_id
-    chat_id = int(f"-100{update.channel_id}")
-    if not await is_cleanmode_on(chat_id):
-        return
-    if chat_id not in clean:
-        clean[chat_id] = []
-    time_now = datetime.now()
-    put = {
-        "msg_id": message_id,
-        "timer_after": time_now + timedelta(minutes=AUTO_DELETE),
-    }
-    clean[chat_id].append(put)
-    await set_queries(1)
 
 
 @app.on_message(filters.command(BROADCAST_COMMAND) & filters.user(OWNER_ID))
