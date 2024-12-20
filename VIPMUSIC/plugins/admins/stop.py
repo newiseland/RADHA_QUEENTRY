@@ -26,7 +26,6 @@ from strings import get_string
 from VIPMUSIC import app
 from VIPMUSIC.core.call import VIP
 from VIPMUSIC.misc import SUDOERS
-from VIPMUSIC.plugins import extra_plugins_enabled
 from VIPMUSIC.utils.database import (
     delete_filter,
     get_assistant,
