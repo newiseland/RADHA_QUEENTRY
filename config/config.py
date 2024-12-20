@@ -41,31 +41,7 @@ DURATION_LIMIT_MIN = int(
     getenv("DURATION_LIMIT", "3000")
 )  # Remember to give value in Minutes
 
-
-EXTRA_PLUGINS = getenv(
-    "EXTRA_PLUGINS",
-    "True",
-)
-
 # Fill True if you want to load extra plugins
-
-
-EXTRA_PLUGINS_REPO = getenv(
-    "EXTRA_PLUGINS_REPO",
-    "https://github.com/MISHRAJII123/NEWMUSICREPOS",
-)
-# Fill here the external plugins repo where plugins that you want to load
-
-
-EXTRA_PLUGINS_FOLDER = getenv("EXTRA_PLUGINS_FOLDER", "plugins")
-
-# Your folder name in your extra plugins repo where all plugins stored
-
-
-# Duration Limit for downloading Songs in MP3 or MP4 format from bot
-SONG_DOWNLOAD_DURATION = int(
-    getenv("SONG_DOWNLOAD_DURATION_LIMIT", "1000")
-)  # Remember to give value in Minutes
 
 
 # You'll need a Private Group ID for this.
@@ -189,14 +165,6 @@ STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
 STRING5 = getenv("STRING_SESSION5", None)
-
-#    __      _______ _____    ___  __ _    _  _____ _____ _____   _____   ____ ________
-#    \ \    / /_   _|  __ \   |  \/  | |  | |/ ____|_   _/ ____|  |  _ \ / __ \__   __/
-#     \ \  / /  | | | |__) |  | \  / | |  | | (___   | || |       | |_) | |  | | | |
-#      \ \/ /   | | |  ___/   | |\/| | |  | |\___ \  | || |       |  _ <| |  | | | |
-#       \  /   _| |_| |       | |  | | |__| |____) |_| || |____   | |_) | |__| | | |
-#        \/   |_____|_|       |_|  |_|\____/|_____/|_____\_____|  |____/ \____/  |_|
-
 
 ### DONT TOUCH or EDIT codes after this line
 BANNED_USERS = filters.user()
