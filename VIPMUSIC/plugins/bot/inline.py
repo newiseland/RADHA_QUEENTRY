@@ -8,7 +8,6 @@
 # All rights reserved.
 #
 
-
 from pyrogram.types import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
@@ -16,9 +15,9 @@ from pyrogram.types import (
 )
 from youtubesearchpython.__future__ import VideosSearch
 
-from config import BANNED_USERS
 from VIPMUSIC import app
 from VIPMUSIC.utils.inlinequery import answer
+from config import BANNED_USERS
 
 
 @app.on_inline_query(~BANNED_USERS)
@@ -42,29 +41,27 @@ async def inline_query_handler(client, query):
             channel = result[x]["channel"]["name"]
             link = result[x]["link"]
             published = result[x]["publishedTime"]
-            description = f"{views} | {duration} Mins | {channel}  | {published}"
+            description = f"{views} | {duration} ᴍɪɴᴜᴛᴇs | {channel}  | {published}"
             buttons = InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="🎥 ᴡᴀᴛᴄʜ ᴏɴ ʏᴏᴜᴛᴜʙᴇ",
+                            text="ʏᴏᴜᴛᴜʙᴇ 🎄",
                             url=link,
                         )
                     ],
                 ]
             )
             searched_text = f"""
-❇️**ᴛɪᴛʟᴇ:** [{title}]({link})
+❄ <b>ᴛɪᴛʟᴇ :</b> <a href={link}>{title}</a>
 
-⏳**ᴅᴜʀᴀᴛɪᴏɴ:** {duration} Mins
-👀**ᴠɪᴇᴡs:** `{views}`
-⏰**ᴘᴜʙʟɪsʜᴇᴅ ᴛɪᴍᴇ:** {published}
-🎥**ᴄʜᴀɴɴᴇʟ ɴᴀᴍᴇ:** {channel}
-📎**ᴄʜᴀɴɴᴇʟ ʟɪɴᴋ:** [ᴠɪsɪᴛ ғʀᴏᴍ ʜᴇʀᴇ]({channellink})
+⏳ <b>ᴅᴜʀᴀᴛɪᴏɴ :</b> {duration} ᴍɪɴᴜᴛᴇs
+👀 <b>ᴠɪᴇᴡs :</b> <code>{views}</code>
+🎥 <b>ᴄʜᴀɴɴᴇʟ :</b> <a href={channellink}>{channel}</a>
+⏰ <b>ᴘᴜʙʟɪsʜᴇᴅ ᴏɴ :</b> {published}
 
-__ʀᴇᴘʟʏ ᴡɪᴛʜ /play ᴏɴ ᴛʜɪs sᴇᴀʀᴄʜᴇᴅ ᴍᴇssᴀɢᴇ ᴛᴏ sᴛʀᴇᴀᴍ ɪᴛ ᴏɴ ᴠᴏɪᴄᴇᴄʜᴀᴛ.__
 
-⚡️ ** ɪɴʟɪɴᴇ sᴇᴀʀᴄʜ ʙʏ {app.mention} **"""
+<u><b>➻ ɪɴʟɪɴᴇ sᴇᴀʀᴄʜ ᴍᴏᴅᴇ ʙʏ {app.name}</b></u>"""
             answers.append(
                 InlineQueryResultPhoto(
                     photo_url=thumbnail,
