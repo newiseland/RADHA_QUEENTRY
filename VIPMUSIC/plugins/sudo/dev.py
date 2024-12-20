@@ -26,7 +26,6 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from VIPMUSIC import app
 from VIPMUSIC.misc import SUDOERS
 from config import OWNER_ID
-from VIPMUSIC.utils.cleanmode import protect_message
 
 
 async def aexec(code, client, message):
