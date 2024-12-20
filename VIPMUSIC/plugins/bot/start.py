@@ -20,7 +20,6 @@ from config import BANNED_USERS, START_IMG_URL
 from strings import get_string
 from VIPMUSIC import Telegram, YouTube, app
 from VIPMUSIC.misc import SUDOERS, _boot_
-from VIPMUSIC.plugins.play.playlist import del_plist_msg
 from VIPMUSIC.plugins.sudo.sudoers import sudoers_list
 from VIPMUSIC.utils.database import (
     add_served_chat,
