@@ -131,7 +131,7 @@ async def helper_private(
         language = await get_lang(chat_id)
         _ = get_string(language)
         keyboard = InlineKeyboardMarkup(
-            paginate_modules(0, HELPABLE, "help", close=True)
+            paginate_modules(0, "help", close=True)
         )
         if START_IMG_URL:
 
