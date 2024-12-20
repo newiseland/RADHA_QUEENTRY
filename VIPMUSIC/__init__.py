@@ -7,7 +7,7 @@
 #
 # All rights reserved.
 
-from VIPMUSIC.core.bot import VIPBot
+from VIPMUSIC.core.bot import VIP
 from VIPMUSIC.core.dir import dirr
 from VIPMUSIC.core.git import git
 from VIPMUSIC.core.userbot import Userbot
@@ -32,7 +32,7 @@ heroku()
 # Load Sudo Users from DB
 sudo()
 
-app = VIPBot()
+app = VIP()
 
 # Assistant Client
 userbot = Userbot()
